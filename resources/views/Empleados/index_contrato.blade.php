@@ -1,0 +1,65 @@
+@extends('plantillasLocales.sideBar')
+
+@section('content')
+    <div class="card shadow">
+        <div class="card-header border-0">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="mb-0">Contratos del empleado {{ $nombre }}</h3>
+                </div>
+                <div class="col text-right">
+                    <a href="{{ route('empleado.contrato.create', $id_empleado) }}"
+                        class="bg-green-600 rounded-xl py-2 px-4 text-white font-bold">Nuevo
+                        contrato</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <tr>
+                        <th scope="col class="px-6 py-3"">Id</th>
+                        <th scope="col class="px-6 py-3"">Contratador</th>
+                        <th scope="col class="px-6 py-3"" width="50px">Inicio de contrato</th>
+                        <th scope="col class="px-6 py-3"">Fin de contrato</th>
+                        <th scope="col class="px-6 py-3"">Modificar</th>
+                        <th scope="col class="px-6 py-3"">Eliminar Contrato</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($contratos as $contrato)
+                        <tr
+                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                {{ $contrato->_id }}
+                            </th>
+                            <td class="px-6 py-4">
+                                {{ $contrato->admin->name }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $contrato->inicio_contrato }}
+                            </td>
+                            <td class="px-6 py-4">
+                                {{ $contrato->fin_contrato }}
+                            </td>
+                            <td>
+                                <form action="{{ route('empleado.contrato.editar', $contrato->_id) }}" method="GET">
+                                    @csrf
+                                    <button type="submit" class="btn btn-sm btn-warning">Modificar</button>
+                                </form>
+                            </td>
+                            <td>
+                                <form action="{{ route('empleado.contrato.destroy', $contrato->_id) }}" method="POST">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-sm btn-warning">eliminar</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    @endsection
