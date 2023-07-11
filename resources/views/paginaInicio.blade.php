@@ -88,7 +88,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="integrantes">
         <div class="py-7 flex justify-center">
             @foreach ($users as $user)
                 <div class="Fuente-2 mx-7 text-lg ">

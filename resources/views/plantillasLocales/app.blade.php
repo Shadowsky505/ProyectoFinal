@@ -58,13 +58,10 @@
                     <ul
                         class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-400 rounded-lg bg-gray-100 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                         <li>
-                            <a href="#" class="otro-item" aria-current="page">Inicio</a>
+                            <a href="{{ route('home') }}" class="otro-item" aria-current="page">Restaurantes</a>
                         </li>
                         <li>
-                            <a href="#" class="otro-item" aria-current="page">Restaurantes</a>
-                        </li>
-                        <li>
-                            <a href="#" class="otro-item" aria-current="page">Integrantes</a>
+                            <a href="#integrantes" class="otro-item" aria-current="page">Integrantes</a>
                         </li>
                         <li>
                             <a href="#" class="otro-item" aria-current="page">Redes</a>
