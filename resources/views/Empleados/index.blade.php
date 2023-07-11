@@ -31,23 +31,20 @@
                             <td>
                                 <form action="{{ route('empleado.editar', $empleado->_id) }}" method="GET">
                                     @csrf
-                                    <button type="submit"
-                                        class="bg-gradient-to-r from-sec-600 to-sec-400 py-2 px-4 rounded-lg text-black Fuente-2 shadow-xl shadow-sec-300/50 hover:from-sec-800 hover:to-sec-500 hover:shadow-sec-300">Modificar</button>
+                                    <button type="submit" class="boton-amarillo">Modificar</button>
                                 </form>
                             </td>
                             <td>
                                 <form action="{{ route('empleado.delete', $empleado->_id) }}" method="post">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit"
-                                        class="bg-gradient-to-r from-red-800 to-red-400 py-2 px-4 rounded-lg text-white Fuente-2 shadow-xl shadow-red-300/50 hover:from-red-800 hover:to-red-500 hover:shadow-red-300">Eliminar</button>
+                                    <button type="submit" class="boton-rojo">Eliminar</button>
                                 </form>
                             </td>
                             <td>
                                 <form action="{{ route('empleados.contrato.view', $empleado->_id) }}" method="GET">
                                     @csrf
-                                    <button type="submit"
-                                        class="bg-gradient-to-r from-green-800 to-green-400 py-2 px-4 rounded-lg text-white Fuente-2 shadow-xl shadow-green-300/50 hover:from-green-800 hover:to-green-500 hover:shadow-green-300">Ver<br>Contratos
+                                    <button type="submit" class="boton-verde">Ver contratos
                                     </button>
                                 </form>
                             </td>

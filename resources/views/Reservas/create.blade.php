@@ -5,17 +5,11 @@ use Illuminate\Support\Str;
 
 @section('content')
 
-    <div class="card shadow">
-        <div class="card-header border-0">
-            <div class="row align-items-center">
-                <div class="col">
-                    <h3 class="mb-0">Reserva en {{ $restaurante->nombre }}</h3>
-                </div>
-                <div class="col text-right">
-                    <a href="/home" class="btn btn-sm btn-success">Regresar </a>
-                    <i class="fa fa-arrow-circle-left"></i>
-                </div>
-            </div>
+    <section class="mt-10">
+        <div class="col text-right">
+            <a href="/home" class="boton-amarillo">Regresar </a>
+            <i class="fa fa-arrow-circle-left"></i>
+        </div>
 
 
         </div class="mt-10">
@@ -46,9 +40,10 @@ use Illuminate\Support\Str;
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                         placeholder="Ingrese la cantidad de personas" value="{{ old('cantidad') }}">
                 </div>
-                <button type="submit" class="btn btn-sm btn-primary">Crear reserva</button>
+                <button type="submit" class="boton-verde mt-5">Crear reserva</button>
             </form>
         </div>
-    </div>
+        </div>
 
+    </section>
 @endsection

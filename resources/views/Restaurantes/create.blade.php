@@ -60,7 +60,7 @@
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 placeholder="Ingrese la url de la imagen" value="{{ old('imagen_portada') }}">
                         </div>
-                        <button type="submit" class="bg-green-500 rounded-lg py-2 px-4">Enviar</button>
+                        <button type="submit" class="boton-verde">Enviar</button>
                     </form>
                 </div>
             </div>

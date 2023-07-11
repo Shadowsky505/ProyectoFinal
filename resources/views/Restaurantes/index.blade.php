@@ -42,8 +42,7 @@
                             <td>
                                 <form action="{{ route('restaurante.editar', $restaurante->_id) }}" method="GET">
                                     @csrf
-                                    <button type="submit"
-                                        class="bg-gradient-to-r from-red-800 to-red-400 py-2 px-4 rounded-lg text-white Fuente-2 shadow-xl shadow-red-300/50 hover:from-red-800 hover:to-red-500 hover:shadow-red-300">Modificar</button>
+                                    <button type="submit" class="boton-amarillo">Modificar</button>
                                 </form>
                             </td>
                             <td>

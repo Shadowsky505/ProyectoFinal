@@ -16,9 +16,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        @foreach ($consultas as $consulta)
+                    @foreach ($consultas as $consulta)
+                        <tr
+                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {{ $consulta->_id }}</th>
@@ -44,9 +44,9 @@
                                     </button>
                                 </form>
                             </td>
-                        @endforeach
-                    </tr>
-                    </tr>
+                        </tr>
+                    @endforeach
+
                 </tbody>
             </table>
         </div>

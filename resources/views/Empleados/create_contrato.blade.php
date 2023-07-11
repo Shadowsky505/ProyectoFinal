@@ -33,7 +33,7 @@ use Illuminate\Support\Str;
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                         type="date" name="fin_contrato" value="{{ old('fin_contrato') }}">
                 </div>
-                <button type="submit" class="bg-green-600 rounded-xl py-2 px-4 text-white font-bold">Registrar
+                <button type="submit" class="boton-verde mt-5">Registrar
                     contrato</button>
             </form>
 

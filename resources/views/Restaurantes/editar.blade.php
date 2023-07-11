@@ -58,7 +58,7 @@
                         placeholder="Ingrese la url de la imagen"
                         value="{{ old('imagen_portada', $restaurante->imagen_portada) }}">
                 </div>
-                <button type="submit" class="bg-green-500 rounded-lg py-2 px-4">Enviar</button>
+                <button type="submit" class="boton-verde">Enviar</button>
             </form>
         </div>
     </section>

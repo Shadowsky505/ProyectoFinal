@@ -16,9 +16,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr
-                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-                        @foreach ($reservas as $reserva)
+                    @foreach ($reservas as $reserva)
+                        <tr
+                            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {{ $reserva->_id }}</th>
@@ -43,9 +43,9 @@
                                         class="bg-gradient-to-r from-red-800 to-red-400 py-2 px-4 rounded-lg text-white Fuente-2 shadow-xl shadow-red-300/50 hover:from-red-800 hover:to-red-500 hover:shadow-red-300">Eliminar</button>
                                 </form>
                             </td>
-                        @endforeach
-                    </tr>
-                    </tr>
+                        </tr>
+                    @endforeach
+
                 </tbody>
             </table>
         </div>
