@@ -2,7 +2,8 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <@extends('plantillasLocales.estilos') </head>
+    @extends('plantillasLocales.estilos')
+</head>
 
 <body style="background-image: url(/img/FONDO2.jpg)" class="bg-cover bg-no-repeat">
 
@@ -176,6 +177,20 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
+
+                    <div>
+                        <button onclick="ejecutarPython()" class="logButtom">Ejecutar Python</button>
+
+                        <script>
+                            function ejecutarPython() {
+                                var output = '<?php echo exec("python ' . base_path('public/python/graficos.py') . '"); ?>';
+                                // Hacer algo con la salida del script de Python, por ejemplo, mostrarla en una alerta
+                                alert(output);
+                            }
+                        </script>
+
+                    </div>
+
                 </ul>
             </div>
         </aside>
@@ -186,6 +201,21 @@
             </main>
         </div>
     </section>
+    <script>
+        document.getElementById('formEjecutar').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/ejecutar-python', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                    document.getElementById('resultado').innerText = xhr.responseText;
+                }
+            };
+            xhr.send();
+        });
+    </script>
 </body>
 
 </html>

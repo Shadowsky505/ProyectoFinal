@@ -1,5 +1,6 @@
 <?php
 
+
 use App\Http\Controllers\Api\ClienteController;
 use App\Http\Controllers\Api\ConsultaController;
 use App\Http\Controllers\Api\EmpleadoController;
@@ -7,6 +8,7 @@ use App\Http\Controllers\Api\ReservaController;
 use App\Http\Controllers\Api\RegistroRespuestaController;
 use App\Http\Controllers\Api\RestauranteController;
 use App\Http\Controllers\InicioController;
+use App\Http\Controllers\PythonController;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -39,6 +41,9 @@ Auth::routes();
 Route::middleware(['auth','admin'])->group(function(){
 
 });
+
+Route::get('/ejecutar-python', 'PythonController@ejecutarPython');
+
 Route::controller(RestauranteController::class)->group(function(){
     Route::get('/home','index2')->name('home');
     Route::get('restaurantes','index')->name('restaurantes.view');

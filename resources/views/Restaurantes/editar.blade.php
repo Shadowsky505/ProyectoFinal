@@ -36,7 +36,7 @@
                         de mesas:</label>
                     <input
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                        type="number" name="mesas" placeholder="Ingrese el numero de mesas"
+                        type="number" min="1" name="mesas" placeholder="Ingrese el numero de mesas"
                         value="{{ old('mesas', $restaurante->mesas) }}">
                 </div>
 
